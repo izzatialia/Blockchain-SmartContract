@@ -6,9 +6,55 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "contributor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "FundReceived",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalRaised",
+						"type": "uint256"
+					}
+				],
+				"name": "GoalReached",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "contributor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Refunded",
+				"type": "event"
 			},
 			{
 				"inputs": [
@@ -18,26 +64,7 @@
 						"type": "address"
 					}
 				],
-				"name": "balances",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_user",
-						"type": "address"
-					}
-				],
-				"name": "checkBalance",
+				"name": "contributions",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -50,7 +77,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "count",
+				"name": "contributorCount",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -63,14 +90,20 @@
 			},
 			{
 				"inputs": [],
-				"name": "deposit",
-				"outputs": [],
-				"stateMutability": "payable",
+				"name": "deadline",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "getCount",
+				"name": "goal",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -95,63 +128,33 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "raisedAmount",
+				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "_count",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "setCount",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_amount",
-						"type": "uint256"
-					}
-				],
-				"name": "withdraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
-			"title": "SimpleContract – starter example for Lab 6 (owner-only counter + deposits) ",
 			"version": 1
 		},
 		"userdoc": {
 			"kind": "user",
-			"methods": {
-				"checkBalance(address)": {
-					"notice": "Read the deposited balance of a given address "
-				},
-				"deposit()": {
-					"notice": "Anyone can deposit Ether; value is added to their balance "
-				},
-				"getCount()": {
-					"notice": "Anyone can read the current counter "
-				},
-				"setCount(uint256)": {
-					"notice": "Owner can set any value for `count` "
-				},
-				"withdraw(uint256)": {
-					"notice": "Withdraw up to the caller’s own deposited amount "
-				}
-			},
+			"methods": {},
 			"version": 1
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleContract.sol": "SimpleContract"
+			"contracts/CrowdFund.sol": "CrowdFund"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -165,12 +168,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/SimpleContract.sol": {
-			"keccak256": "0x6982fd02b088d2e116fbb243840d949a0b9ee5846964159038f88dc411aa05a3",
+		"contracts/CrowdFund.sol": {
+			"keccak256": "0xfa72b496d76e97c32d32722987dfe02fe6346e218d9328e3a1e1ba2b372539b3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://55ddfd2b08ea11e78acd98c251c97ddc4e609dbb3168ed9daf44d4da00219145",
-				"dweb:/ipfs/QmWWbeeFTEZNqmD1WRJPTzFWvT6rvArhk6vkrikkbSmbvX"
+				"bzz-raw://f8cb7189c30c871e5623a57c4d7218b8497c9249bcfdfd586aec503615611b51",
+				"dweb:/ipfs/QmcXDihETGmNysexRB572TL5Y63RHRwWTh6JVcg1u3YQmY"
 			]
 		}
 	},
