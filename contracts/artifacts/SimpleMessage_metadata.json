@@ -56,7 +56,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleMessage.sol": "SimpleContract"
+			"contracts/SimpleMessage.sol": "SimpleMessage"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -71,11 +71,11 @@
 	},
 	"sources": {
 		"contracts/SimpleMessage.sol": {
-			"keccak256": "0xaec53001105276d661b28f1ce2470af03af72d2e7af0b088714ea607e4e91d88",
+			"keccak256": "0x49dca31e8fccaedff72ab28a9e0c1adb6895aede2570920aa7afb56e3398e07a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0273a5a22c0d53c6e8c33ed7285d1dce5ca30c5c83ea2ecfd45f211a78197992",
-				"dweb:/ipfs/QmQnXiJwmrxWk1fcV4Z3fNS6ejEXA5APV4La6h2rZjfmTq"
+				"bzz-raw://bd68c976e9bcd074765975db22c3eb2fa4cb5835df975b7a5648605612139e00",
+				"dweb:/ipfs/QmZpgrtYpBaw1WGQCjhMXahZVZGamhkCgk2czgZHpfV8Et"
 			]
 		}
 	},
