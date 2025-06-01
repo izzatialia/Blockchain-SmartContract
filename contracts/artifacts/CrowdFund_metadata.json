@@ -234,7 +234,7 @@
 		"compilationTarget": {
 			"contracts/CrowdFund.sol": "CrowdFund"
 		},
-		"evmVersion": "cancun",
+		"evmVersion": "istanbul",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
